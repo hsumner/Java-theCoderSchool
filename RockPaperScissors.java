@@ -1,9 +1,8 @@
-
 import java.util.Scanner;
 import java.util.Random;
 public class RockPaperScissors {
      public static void main(String[] args) {
-         int player;
+         int player = 0;
          
          Scanner scan = new Scanner(System.in);
          
@@ -22,7 +21,7 @@ public class RockPaperScissors {
              player = 3;
              System.out.println("You chose paper.");
          } else {
-             System.out.println("Please type in a valid answer.");
+             System.out.println("Y U not write a real answer.");
          }
          
          Random rand = new Random();
@@ -35,5 +34,16 @@ public class RockPaperScissors {
          } else if (computer == 3) {
              System.out.println("The computer chose paper.");
          }
+         
+         if ((player + 1) % 3 == computer) {
+             System.out.println("You Got The #1 Victory Royale!");
+         } else if ((computer + 1) % 3 == player) {
+             System.out.println("You Took The L");
+         } else {
+             System.out.println("You Tied With The Epic Gamers");
+         }
+        
      }
+     
 }
+
